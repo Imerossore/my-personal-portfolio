@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import MainHeader from "@/components/main-header";
+import Footer from "@/components/footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -28,7 +30,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <MainHeader />
           <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
