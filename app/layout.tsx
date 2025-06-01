@@ -11,7 +11,7 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Raymond – Web Developer Portfolio",
   description:
     "Portfolio of Imerossore, a modern web developer specializing in Next.js, React, ShadCN, and Tailwind CSS. Explore projects, skills, and contact info.",
