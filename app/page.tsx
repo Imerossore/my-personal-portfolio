@@ -1,12 +1,9 @@
+import HeroSection from "@/components/sections/hero";
+
 export default function Home() {
   return (
     <>
-      <section
-        id="hero"
-        className="flex justify-center items-center  min-h-[70dvh]"
-      >
-        <h1>Home</h1>
-      </section>
+      <HeroSection />
       <section
         id="about"
         className="flex justify-center items-center min-h-[60dvh] bg-secondary"

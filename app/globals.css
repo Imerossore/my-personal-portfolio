@@ -114,6 +114,10 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 100ms;
+
   }
 
   body {
@@ -123,38 +127,9 @@
 
 
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--border));
-  border-radius: 4px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground));
-}
-
-/* Show scrollbar on scroll */
-html:hover::-webkit-scrollbar-thumb,
-html.scrolling::-webkit-scrollbar-thumb {
-  opacity: 1;
-}
-
-/* Firefox */
 html {
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-  transition: scrollbar-color 0.3s ease;
-}
-
-html:hover,
-html.scrolling {
-  scrollbar-color: hsl(var(--border)) transparent;
+  scrollbar-width: none;
 }

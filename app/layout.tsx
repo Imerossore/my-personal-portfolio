@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import MainHeader from "@/components/main-header";
 import Footer from "@/components/footer";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/contants";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -12,9 +13,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Raymond – Web Developer Portfolio",
-  description:
-    "Portfolio of Imerossore, a modern web developer specializing in Next.js, React, ShadCN, and Tailwind CSS. Explore projects, skills, and contact info.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
 };
 export default function RootLayout({
   children,
@@ -24,12 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={` ${poppins.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <MainHeader />
           <main>{children}</main>
           <Footer />
